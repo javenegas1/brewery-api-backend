@@ -22,4 +22,8 @@ app.get("/", (req, res) => {
     res.send("hello world");
 });
 
-app.listen(4000, () => console.log(`listening on PORT 4000`));
+//declare a variable for our port number
+const PORT = process.env.PORT || 4000;
+
+// turn on the server listener
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
